@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Thor40/goodFam#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.9.24"
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.25"
   }
 }
