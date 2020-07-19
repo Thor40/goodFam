@@ -67,8 +67,8 @@ const thoughtController = {
     },
     // add reactions
     addReaction({ params, body }, res) {
-        User.findOneAndUpdate(
-            { _id: params.userId },
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
             { $push: { reactions: body } },
             { new: true }
         )
@@ -83,8 +83,8 @@ const thoughtController = {
     },
     // remove reaction
     removeReaction({ params }, res) {
-        User.findOneAndUpdate(
-            { _id: params.userId },
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
             // $pull to remove spefici reactions from the reactions array where reactionId matches the value of params.reactionID passed in from the route
             { $pull: { reactions: { reactionId: params.reactionId } } },
             { new: true }
