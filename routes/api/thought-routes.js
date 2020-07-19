@@ -13,7 +13,7 @@ router.route('/').get(getThought);
 // /api/thoughts/<thoughtId>
 router.route('/:id').get(getThoughtById);
 
-router.route('/userId/:thoughtId').delete(removeThought);
+router.route('/:userId/:thoughtId').delete(removeThought);
 
 // /api/thoughts/<userId>
 router.route('/:userId').post(addThought);
