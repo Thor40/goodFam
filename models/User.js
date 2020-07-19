@@ -19,10 +19,10 @@ const UserSchema = new Schema ({
             message: 'Please enter a valid email'
             }
         },
-    thoughts: {
+    thoughts: [{
         type: Schema.Types.ObjectId,
         ref: 'Thought'
-        },
+        }],
     friends: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
