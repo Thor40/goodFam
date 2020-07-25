@@ -13,6 +13,7 @@ router.route('/').get(getThought);
 // /api/thoughts/<thoughtId>
 router.route('/:id').get(getThoughtById);
 
+// /api/thoughts/<userId>/<thoughtId>
 router.route('/:userId/:thoughtId').delete(removeThought);
 
 // /api/thoughts/<userId>

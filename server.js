@@ -10,7 +10,10 @@ app.use(express.static('public'));
 
 app.use(require('./routes'));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/GoodFam', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/GoodFam',
+{
+        // /* Drop the DB */
+        // mongoose.connection.db.dropDatabase();
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
